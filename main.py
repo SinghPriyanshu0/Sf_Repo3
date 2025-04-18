@@ -67,7 +67,7 @@ async def search_order(email: str):
         conn = get_connection()
         cur = conn.cursor()
         schema_name = 'SC'  # Specify your schema name here
-        tables = ['Order1', 'Order2', 'Order3']
+        tables = ['org1', 'org2', 'org3']
 
         for table in tables:
             query = f"""
@@ -87,6 +87,6 @@ async def search_order(email: str):
         raise HTTPException(status_code=500, detail=f"Failed to search: {e}")
     
     if not results:
-        raise HTTPException(status_code=404, detail="No matching records found in Order1, Order2, or Order3.")
+        raise HTTPException(status_code=404, detail="No matching records found in Org1, Org2, or Org3.")
     
     return results
