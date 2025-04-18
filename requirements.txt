@@ -4,6 +4,6 @@ pydantic
 pandas
 snowflake-connector-python
 python-dotenv
-pydantic[email]git add requirements.txt
+pydantic[email]
 
 

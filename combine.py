@@ -156,10 +156,7 @@ if 'email' in st.session_state and 'phone' in st.session_state:
                         final_df = pd.concat(all_matches, ignore_index=True)
                         final_df.columns = [col.lower() for col in final_df.columns]
                         try:
-                            display_df = final_df[["sourcetable", "orderamount",
-        "email",
-        "mobilephone",
-        "description"]]
+                            display_df = final_df[["sourcetable", "order_number","order_date","order_amount","email","mobilephone","description"]]
                             st.success("📦 Orders found across sources!")
                             st.dataframe(display_df)
                         except KeyError:
